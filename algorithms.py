@@ -1,10 +1,13 @@
-# CHALLENGE1
+# CHALLENGE 1
 def triangular_triplet(arr):
     array_length = len(arr)
     if array_length<3 :
         return 0
     arr.sort()
-
+    for i in range(array_length/2):
+        if arr[i] + arr[i+1] > arr[i+2]:
+            return 1
+    
 
 # CHALLENGE 2
 def nested(s):
@@ -41,7 +44,7 @@ def dominator(arr):
         return temp
     return -1
 
-  
+ print(triangular_triplet([10, 2, 5, 1, 8, 20])) 
 print(dominator([3,4, 3, 2, 3, -1, 3, 3]))
 print(nested("{[()()]}"))
 print(nested("([)()]"))
